@@ -1,6 +1,8 @@
-from django.urls import path
-from . import views
+from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
-    path('Portfolio/', views.Portfolio, name='Portfolio')
+    path('admin/', admin.site.urls),
+    path('', include('Portfolio.urls')),  # aqui você conecta seu app
 ]
+
