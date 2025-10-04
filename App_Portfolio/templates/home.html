@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,6 +8,7 @@
     <meta name="keywords" content="Eduardo Amaral, JavaScript, Portfolio, Python, Django, Desenvolvedor, Análise de dados, Web Development">
     <meta name="author" content="Eduardo Amaral">
     <meta name="robots" content="index, follow">
+    {% load static %}
     <link rel="canonical" href="https://eduardamaral.pythonanywhere.com/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -52,7 +52,7 @@
                     <ul>
                         <li>
                             <div data="{{ tech|upper }}">
-                                <img src="{% tech_icon tech %}" alt="{{ tech }}-ico" onerror="this.src='{% static 'Portfolio/SVG/node.svg' %}'">
+                                <img src="{% tech_icon tech %}" alt="{{ tech }}-ico">
                             </div>
                         </li>
                     </ul>
@@ -62,17 +62,17 @@
         </div>
         <div class="person-background">
             <div class="wrapper-profile-photo">
-                <img class="profile-photo" src="{% static 'Portfolio/IMG/Foto Perfil.jpeg'%}" alt="Photo">
+                <img class="profile-photo" src="{% static 'Portfolio/IMG/Foto Perfil.jpeg'%}" alt="Perfil">
             </div>
 
             <div class="links">
-                <a href="https://github.com/EduarAmaral" target="_blank">
+                <a href="https://github.com/EduarAmaral" target="_blank" rel="noopener noreferrer">
                     <img src="{% static 'Portfolio/SVG/logo-github.svg'%}" alt="icon-github">
                 </a>
-                <a href="https://www.instagram.com/eduprogramacao43/" target="_blank">
+                <a href="https://www.instagram.com/eduprogramacao43/" target="_blank" rel="noopener noreferrer">
                     <img src="{% static 'Portfolio/SVG/logo-insta.svg'%}" alt="icon-insta">
                 </a>
-                <a href="https://www.linkedin.com/in/eduardo-amaral-bba076256" target="_blank">
+                <a href="https://www.linkedin.com/in/eduardo-amaral-bba076256" target="_blank" rel="noopener noreferrer">
                     <img src="{% static 'Portfolio/SVG/logo-linkedin.svg'%}" alt="icon-linkedin">
                 </a>
             </div>
@@ -269,7 +269,7 @@
                 </div>
                 <div class="contact-info">
                     <span>WhatsApp: </span>
-                    <a href="http://api.whatsapp.com/send?phone=5562995374989" target="_blank">
+                    <a href="http://api.whatsapp.com/send?phone=5562995374989" target="_blank" rel="noopener noreferrer">
                         <p>+55 62 99537-4989</p>
                     </a>
                 </div>

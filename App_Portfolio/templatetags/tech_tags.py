@@ -22,12 +22,12 @@ def tech_icon(tech_name):
     
     # Tenta encontrar o arquivo pelo nome mapeado
     file_name = name_mapping.get(tech_lower, tech_lower)
-    
-    # Caminho para o diretório de SVGs
-    svg_dir = os.path.join(settings.STATIC_ROOT, 'Portfolio', 'SVG')
-    
-    # Verifica se o arquivo existe (apenas para debug, não afeta o funcionamento)
+        
+    # Verifica se o arquivo existe, se não usaará fallback com node.svg
     svg_path = f'Portfolio/SVG/{file_name}.svg'
-    
+    svg_absolute_path = os.path.join(settings.STATIC_ROOT or '', svg_path)
+
+    if not os.path.exists(svg_absolute_path):
+        svg_path = 'Portfolio/SVG/node.svg'
     # Retorna o caminho estático
     return static(svg_path)
