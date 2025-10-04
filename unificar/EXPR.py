@@ -6,7 +6,7 @@ import json
 projeto = "C:/Users/eduar/Desktop/Portfolio_Django"
 
 # Extensões que queremos incluir
-extensoes = ('.py', '.html', '.js')
+extensoes = ('.html', '.js', '.css')
 
 arquivos = []
 
