@@ -14,20 +14,28 @@ def tech_icon(tech_name):
         'javascript': 'js',
         'html5': 'html',
         'css3': 'css',
+        'html': 'html',
+        'css': 'css',
         'github': 'logo-github',
         'python': 'python',
         'django': 'django-sigla',
-        'SQL': 'SQL'
+        'sql': 'SQL'
     }
     
     # Tenta encontrar o arquivo pelo nome mapeado
     file_name = name_mapping.get(tech_lower, tech_lower)
-        
-    # Verifica se o arquivo existe, se não usaará fallback com node.svg
+    
+    # Lista de arquivos SVG disponíveis
+    available_svgs = [
+        'css', 'django-sigla', 'django', 'html', 'js', 'logo-github', 
+        'logo-insta', 'logo-linkedin', 'node', 'python', 'react', 
+        'Excel', 'MYSQL', 'SQL'
+    ]
+    
+    # Verifica se o arquivo existe na lista, se não usa fallback
+    if file_name not in available_svgs:
+        file_name = 'node'
+    
     svg_path = f'Portfolio/SVG/{file_name}.svg'
-    svg_absolute_path = os.path.join(settings.STATIC_ROOT or '', svg_path)
-
-    if not os.path.exists(svg_absolute_path):
-        svg_path = 'Portfolio/SVG/node.svg'
     # Retorna o caminho estático
     return static(svg_path)

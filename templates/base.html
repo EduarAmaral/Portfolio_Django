@@ -1,11 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Portfolio de Eduardo Amaral - Desenvolvedor Web FullStack e Analista de Dados. Veja meus projetos e habilidades técnicas.">
+    <meta name="keywords" content="Eduardo Amaral, JavaScript, Portfolio, Python, Django, Desenvolvedor, Análise de dados, Web Development">
+    <meta name="author" content="Eduardo Amaral">
+    <meta name="robots" content="index, follow">
+    {% load static %}
+    <link rel="canonical" href="https://eduardamaral.pythonanywhere.com/">
+    
+    <!-- CSS Padrão -->
+     {% block extra_css %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'Portfolio/CSS/main.css'%}">
+    
+
+    <!-- Título Principal -->
+    <title>{% block title %}Portfolio Eduardo Amaral{% endblock %}</title>
 </head>
 <body>
-    
+    <!-- Header -->
+    <section id="header">
+        <a class="header-title" href="/App_Portfolio/Portfolio/">
+            <h1>
+                Eduardo A.
+            </h1>
+        </a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#person">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contacts">Contatos</a></li>
+            </ul>
+        </nav>
+    </section>
+    <!-- End Header -->
+
+    <!-- Content dos Apps-->
+    {% block content %}
+    <main></main>
+    {% endblock %}
+
+       <!-- Footer -->
+    <section id="footer">
+        <div class="container-footer">
+            <h2>Feito por</h2>
+            <h3>Eduardo Amaral @ 2023</h3>
+        </div>
+    </section>
+    <!-- End Foooter -->
+
+    <!-- JS -->
+    {% block extra_js_top %}{% endblock %}
+    {% block extra_js_bottom %}{% endblock %}
+    {% block extra_js %}
+    <script src="{% static 'Portfolio/JS/script.js'%}"></script>
+    {% endblock %}
+
 </body>
 </html>

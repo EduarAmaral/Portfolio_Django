@@ -1,9 +1,18 @@
+/* ==============================================
+   IMPORTS AND RESET
+   ========================================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
+
+/* =========================================================
+   GLOBAL VARIABLES
+   ========================================================= */
 
 :root {
     --color-white: #fff;
@@ -15,6 +24,10 @@
     --color-gray:#2f2f3b;
 }
 
+/* =========================================================
+   BASE STYLES
+   ========================================================= */
+
 html{
     scroll-behavior: smooth;
     font-size: 10px;
@@ -22,7 +35,13 @@ html{
 
 body{
     font-family: 'Lora', serif;
+    background-color: var(--color-black);
+    color: var(--color-white);
 }
+
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 #header{
     display: flex;
@@ -75,6 +94,10 @@ body{
     font-weight: 700;
 }
 
+
+/* =========================================================
+   PERSON SECTION
+   ========================================================= */
 #person{
     height: 100vh;
     width: 100%;
@@ -150,9 +173,12 @@ body{
     margin-top: 11rem;
 }
 
+/* =========================================================
+   SKILLS SECTION
+   ========================================================= */
+
 .stacks-content{
     display: flex;
-    /* align-items: center; */
     justify-content: center;
 
     flex-direction: column;
@@ -192,7 +218,6 @@ body{
 .stacks ul li div{
     width: 50px;
     height: 60px;
-    /* margin: 0px 0px 2px 2px; */
 }
 
 .stacks ul li div:hover::after{
@@ -203,7 +228,6 @@ body{
     font-weight: bold;
     position: absolute;
     top: 65px;
-    /* margin: 10px; */
     left: 12.5px;
 
     width: 45px;
@@ -225,6 +249,9 @@ body{
     cursor: pointer;
 }
 
+/* =========================================================
+   BACKGROUND PROFILE
+   ========================================================= */
 
 .person-background{
     height: 100vh;
@@ -296,7 +323,9 @@ body{
     transform: scale(1.15);
 }
 
-/* primeira parte finalizada */
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
 
 #about{
     height: 100vh;
@@ -332,8 +361,6 @@ body{
 
     height: 100%;
     width: 100%;
-
-    /* opacity: .9; */
 
     background:
         linear-gradient(180deg, transparent 30%, var(--color-black)), 
@@ -449,7 +476,9 @@ body{
     
 }
 
-/* segunda parte finalizada */
+/* =========================================================
+   PROJECTS SECTION
+   ========================================================= */
 
 #projects{
     height: 100vh;
@@ -471,18 +500,6 @@ body{
 
 }
 
-/* .wrapper-projects{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    
-    height: 500px;
-
-    margin-top: 2rem;
-
-} */
-
 .container-projects{
     height: 100%;
     width: 100%;
@@ -501,7 +518,7 @@ body{
     align-items: center;
     flex-direction: row;
     
-    height: 500px;
+    max-height: 500px;
 
     margin-top: 2rem;
 }
@@ -511,7 +528,6 @@ body{
     height: 450px;
 
     padding: 30px 20px 20px;
-    /* margin: 0px 10px; */
 
     position: relative;
     background: var(--color-white);
@@ -537,17 +553,6 @@ body{
     border-radius: 20px 20px 0px 0px;
     z-index: -1;
 }
-
-/* .content-project{
-    width: 100%;
-    height: 100%;
-
-    
-    display: flex;
-    flex-direction: column;
-
-    z-index: 1;
-} */
 
 .image-project{
     max-height: 240px;
@@ -627,7 +632,9 @@ body{
     opacity: .7;
 }
 
-/* Projects Finalizado */
+/* =========================================================
+   CONTACT SECTION
+   ========================================================= */
 
 #contacts{
     display: flex;
@@ -709,6 +716,10 @@ body{
     color: var(--color-blue);
 }
 
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
 #footer{
     height: 15vh;
     width: 100%;
@@ -731,6 +742,10 @@ body{
     color: var(--color-white);
 }
 
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
 @keyframes written_text {
     100%{
         color: var(--color-white);
@@ -751,6 +766,40 @@ body{
     100%{
         width: 0;
         left: 100%;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    html {
+        font-size: 9.5px;
+    }
+
+    #header {
+        padding: 10px 20px;
+    }
+
+    .navbar ul li a {
+        font-size: 1.2rem;
+    }
+
+    #person {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .person-content div h1 {
+        font-size: 3.5rem;
+        line-height: 5rem;
+    }
+
+    .card-project {
+        width: 280px;
+        height: 400px;
     }
 }
 
@@ -784,7 +833,6 @@ body{
 
     .person-background{
         width: 100%;
-        /* height: 50%; */
     }
 
     .person-background::after{
@@ -839,7 +887,7 @@ body{
             linear-gradient(0deg, transparent 8%, var(--color-black));
     }
     .box-about h4{
-        background: #000001b4;;
+        background: #000001b4;
     }
 
     .stacks ul{
@@ -882,3 +930,56 @@ body{
     }
 }
 
+@media (max-width: 600px) {
+
+    html {
+        font-size: 8.5px;
+    }
+
+    #header {
+        padding: 10px;
+    }
+
+    .header-title h1 {
+        font-size: 1.4rem;
+    }
+
+    #person {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 6rem;
+    }
+
+    .person-content div h1 {
+        font-size: 2.8rem;
+        line-height: 4rem;
+    }
+
+    .wrapper-profile-photo {
+        width: 70%;
+        max-width: 200px;
+    }
+
+    .stacks ul li div img {
+        width: 35px;
+    }
+
+    .card-project {
+        width: 250px;
+        height: 370px;
+    }
+
+    .projects-title h2 {
+        font-size: 2rem;
+    }
+
+    #contacts {
+        height: auto;
+        padding: 2rem;
+    }
+
+    .contact-icons-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
