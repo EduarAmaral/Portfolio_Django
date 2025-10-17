@@ -10,10 +10,11 @@
     <meta name="robots" content="index, follow">
     {% load static %}
     <link rel="canonical" href="https://eduardamaral.pythonanywhere.com/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- CSS Padrão -->
      {% block extra_css %}{% endblock %}
-    <link rel="stylesheet" href="{% static 'Portfolio/CSS/main.css'%}">
+    <link rel="stylesheet" href="{% static 'Portfolio/CSS/main.css'%}?v=2.1">
     
 
     <!-- Título Principal -->
@@ -21,14 +22,17 @@
 </head>
 <body>
     <!-- Header -->
-    <section id="header">
-        <a class="header-title" href="/App_Portfolio/Portfolio/">
+    <header id="header">
+        <a class="header-title" href="#person">
             <h1>
                 Eduardo A.
             </h1>
         </a>
+        <button class="menu-toggle" aria-label="Abrir menu" aria-controls="primary-navigation" aria-expanded="false">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
 
-        <nav class="navbar">
+        <nav id="primary-navigation" class="navbar" role="navigation" aria-label="Main Navigation">
             <ul>
                 <li><a href="#person">Home</a></li>
                 <li><a href="#about">Sobre</a></li>
@@ -36,7 +40,7 @@
                 <li><a href="#contacts">Contatos</a></li>
             </ul>
         </nav>
-    </section>
+    </header>
     <!-- End Header -->
 
     <!-- Content dos Apps-->
@@ -56,7 +60,7 @@
     <!-- JS -->
     {% block extra_js_top %}{% endblock %}
     {% block extra_js_bottom %}{% endblock %}
-    <script src="{% static 'Portfolio/JS/script.js'%}"></script>
+    <script src="{% static 'Portfolio/JS/script.js'%}?v=1.8"></script>
 
 </body>
 </html>

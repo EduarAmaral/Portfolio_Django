@@ -168,3 +168,6 @@ cython_debug/
 #Arquivos MarKdown e Ipython
 *.ipynb
 *.md
+
+#arquivos do trae
+.trae/

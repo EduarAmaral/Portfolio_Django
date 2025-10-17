@@ -27,8 +27,8 @@ def tech_icon(tech_name):
     
     # Lista de arquivos SVG disponíveis
     available_svgs = [
-        'css', 'django-sigla', 'django', 'html', 'js', 'logo-github', 
-        'logo-insta', 'logo-linkedin', 'node', 'python', 'react', 
+        'css', 'django-sigla', 'django', 'html', 'js', 'logo-github',
+        'logo-insta', 'logo-linkedin', 'node', 'python', 'react',
         'Excel', 'MYSQL', 'SQL'
     ]
     
